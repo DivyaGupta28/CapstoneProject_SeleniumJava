@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+//import sun.jvm.hotspot.utilities.Assert;
+import static org.testng.Assert.assertEquals;
+
 
 public class SeleniumJava_MyAccountPage {
 	WebDriver driver;
@@ -122,6 +125,8 @@ public class SeleniumJava_MyAccountPage {
 			titlePageAct = driver.findElement(By.xpath("//h3[contains(text(),\"A/B Test\")]")).getText();
 			System.out.println("Title Page:" + titlePageAct);
 			//Assert.assertTrue(titlePageExp.equals(titlePageAct));
+			assertEquals(titlePageAct,titlePageExp,"Title Page not matched");
+
 		} catch (Exception e) {
 			//Assert.assertTrue(titlePageExp.equals(titlePageAct));
 			System.out.println("Title Page not matched: Pass");
