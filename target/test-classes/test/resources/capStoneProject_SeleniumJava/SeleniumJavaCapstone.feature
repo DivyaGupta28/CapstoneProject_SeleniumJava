@@ -11,7 +11,9 @@ Feature: Implement below capstone project using Selenium with Java concepts (Imp
     And   I navigate back to home Page
     And   I scroll down on web page
     And   I validated the text from the frames
+    And   I close the browser
 
     Examples:
       | page_title | page_name            | option  |
       | Welcome    | A/B Test Variation 1 | Option1 |
+      | Welcome    | A/B Test Control     | Option1 |
